@@ -1,0 +1,453 @@
+้้html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Prompt";
+  /* clear: both; */
+}
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+
+.pageA-grid
+{ 
+  margin:0 ;
+  padding: 0;
+  display:grid;
+  height: auto; 
+  /* float: right; */
+  /* grid-template-columns: repeat(2,1fr); */
+  /* grid-template-rows:repeat(1,1fr) ; */
+  /* max-width: 1500px; */
+  /* background-image: linear-gradient(rgba(104,62,63),rgba(105,129,113)); */
+  background-color: rgb(255, 255, 255);
+  grid-gap: 5px; 
+  
+}
+
+
+.grid-items3
+{ 
+  /* float: left; */
+  /* margin-top: 250px; */
+  border: 5px solid rgb(248, 240, 240);
+  height: 85vh;
+  /* margin-right: 700px; */
+  width: 100%;
+  background-color: rgb(184, 233, 235);
+  /* background-image:linear-gradient(green,white) */
+}
+
+.CommunityName{
+ 
+  font-family: "kanit", sans-serif;
+  text-align: center;
+  font-size:25px;
+  color:rgb(255, 255, 255);
+  font-weight: 00;
+
+  background-color:none;
+  border-radius: 20px;
+}
+.wrapButton {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.buttonCom {
+  margin: 0.8em;
+  min-width: 600px;
+  min-height: 60px; 
+  text-transform: uppercase;
+  font-size:100px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background: #4fc744;
+  background: linear-gradient(90deg, rgb(15, 70, 27) 0%, rgba(87, 196, 15, 0.932) 100%);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 12px 12px 24px rgba(18, 136, 28, 0.897);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer; /*ทำให้ตอนชี้เป็นรูปนิ้ว */
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.buttonCom::before {
+  content: '';
+  min-width: calc(600px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #92e978;
+  box-shadow: 0 0 60px rgba(16, 245, 35, 0.925);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.buttonCom:hover,.buttonCom:focus {
+  color: #8eeb72;
+  transform: translateY(-7px);
+ 
+}
+
+.buttonCom:hover::before,.buttonCom:focus::before {
+  opacity: 1;
+}
+.buttonCom:hover::after, .buttonCom:focus::after {
+  animation: none;
+  display: none;
+}
+
+
+
+/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */
+.Topic{
+  font-family: "kanit", sans-serif;
+  padding:1em;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  
+}
+.Answer{
+  
+  width: 450px;
+  height: 25px;
+  box-shadow: 4px 4px 4px rgb(214, 224, 68);
+  font-family: "kanit", sans-serif;
+  font-size: 15px;
+  color: #000000;
+  border-style: none;
+  
+}
+ .btn-warning{
+   font-family: "kanit", sans-serif;
+   float:right;
+   margin-right: 20px;
+}
+.History
+{ 
+  font-family: "kanit", sans-serif;
+  
+}
+.commun{
+  font-family: "kanit", sans-serif;
+  margin-left: 250px ;
+  color:#006765;
+  font-size: 30px;
+
+}
+.Ques{
+  color: #000000;
+  /* margin-left: 380px; */
+  font-family: "kanit", sans-serif;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.Userpage {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.btn-info{
+  margin-top: 100px;
+  margin-left:600px ;
+  width: 85px;
+  
+}
+.btn-light{
+  margin-top: 100px;
+  left: 10px;
+  margin-left:10px ;
+}
+.Modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  line-height: 200px;
+  height: 250px;
+  margin-left: -150px;
+  margin-top: -100px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  /* needed styles for the overlay */
+  z-index: 10; /* keep on top of other elements on the page */
+  outline: 9999px solid rgba(0, 0, 0, 0.329);
+}
+.SaveData{
+  margin: 0px;
+  font-family: "kanit", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  /* border-style: solid; */
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+.accept{
+  width: 80px;
+  float: left;
+  text-align: center;
+  margin-left: 120px;
+  background-color: #4fc744;
+  
+  
+}
+
+.back{
+  
+  float: left;
+  text-align: center;
+ margin-left: 8px;
+}
+.IconChat{
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+  
+}
+.IconChat:hover::before,.IconChat:focus::before {
+  opacity: 1;
+}
+.IconChat:hover::after, .IconChat:focus::after {
+  animation: none;
+  display: none;
+}
+.IconChat:hover,.IconChatCom:focus {
+  color: #8eeb72;
+  transform: translateY(-7px);
+  transform: translateX(7px);
+}
+.MDT{
+  width: 80px;
+  margin-left: 8px;
+  font-family: "kanit", sans-serif;
+  margin-right: none;
+}
+.MDTT{
+  font-family: "kanit", sans-serif;
+  /* margin-left:8px; */
+  width: 80px;
+}
+.TextareaModalText{
+ height: 150px;
+ width: 400px;
+ margin-left: 28px;
+ background-color:rgb(179, 238, 151);
+ color: rgb(66, 61, 61);
+ font-family: "kanit", sans-serif;
+ border-style: none;
+ padding:0.5em;
+}
+.popup2{
+  font-size: 30px;
+}
+.navv {
+  background-color: lawngreen;
+  width: 100%;
+  height: 500px;
+}
+
+
+
+.navbar-custom {
+  height: 80px;
+  background-color: #2f3337;
+  transition: box-shadow 0.5s;
+  box-shadow: 0px 0px 10px 0px #000;
+}
+
+.logo-ku-userpage {
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.backAdmin {
+  background-color: #0badab46;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px 0px rgba(58, 59, 59, 0.425);
+  cursor: pointer;
+  height: 50%;
+  -webkit-border-radius: 4px;
+}
+
+.headpopup{
+  font-family: "kanit", sans-serif;
+  color: #006765;
+  
+}
+.SizeModal{ 
+  flex-direction: column;
+}
+
+
+
+
+
+
+/*                 RESPONSIVE                             */
+@media (max-width :480px) {
+   .pageA-grid{
+     flex-direction: column;
+     text-align:center;
+   }
+   
+     /* PAGE A */
+   .wrapButton {
+    height: 100%;
+    display: flex;
+    justify-content:center ;
+   
+   } 
+  .buttonCom {
+  margin: 0.8em;
+  min-width: 250px;
+  min-height: 60px; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background: #4fc744;
+  background: linear-gradient(90deg, rgb(15, 70, 27) 0%, rgba(87, 196, 15, 0.932) 100%);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 12px 12px 24px rgba(18, 136, 28, 0.897);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer; /*ทำให้ตอนชี้เป็นรูปนิ้ว */
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+  .CommunityName {
+    font-family: "kanit", sans-serif;
+    margin-left: 10px;
+    text-align: center;
+    font-size:15px;
+    color:rgb(255, 255, 255);
+    margin-top: 10px;
+    background-color:none;
+    border-radius: 20px;
+}
+    /* PAGE A */
+    /* PAGE B */
+.Topic{
+font-family: "kanit", sans-serif;
+font-size: 25px;
+color: rgb(0, 0, 0);
+
+padding: 0px;
+}
+.Userpage {
+  height: auto;
+  position: none;
+  flex-direction: column;
+}
+.Answer{     
+width: 250px;
+height: 25px;
+box-shadow: 4px 4px 4px rgb(214, 224, 68);
+font-family: "kanit", sans-serif;
+font-size: 15px;
+color: #000000;
+border-style: none;
+}
+.btn-warning{ /*ปุ่ม ประวัติ*/
+font-family: "kanit", sans-serif;
+float:right;
+}
+.Pclickme{ 
+font-family: "kanit", sans-serif;
+  
+}
+.IconChat{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.commun{
+  font-family: "kanit", sans-serif;
+  color:#006765;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left:0px;
+}
+
+.btn-info { /*ปุ่ม บันทึก*/
+  position: absolute;
+  width: 85px;
+ margin-left:1px;
+}
+.btn-light{ /*ย้อนกลับ*/
+  position: none;
+  margin-left:100px ;
+}
+.Ques{
+  color: #000000;
+  font-family: "kanit", sans-serif;
+  font-size: 20px;
+  clear: both; 
+  margin-top: 50px ;
+}
+.History{
+  display: flex;
+}
+.btn-warning{
+  font-family: "kanit", sans-serif;
+   float:none;
+   margin:0 auto;
+   position: absolute;
+   margin-top: 40px;
+}
+.IconChat{
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 40px;
+  position: absolute;
+  margin-left: 55px;
+}
+.grid-items3
+{ 
+  /* float: left; */
+  /* margin-top: 250px; */
+  border: 7px solid rgb(248, 240, 240);
+  height: 100%;
+  /* margin-right: 700px; */
+  width: 100%;
+  background-color: rgb(184, 233, 235);
+  /* background-image:linear-gradient(green,white) */
+}
+    
+    /* Modal  */
+    .TextareaModalText{
+      height: 150px;
+      width: 300px;
+      margin-left: 28px;
+      background-color:rgb(179, 238, 151);
+      color: rgb(66, 61, 61);
+      font-family: "kanit", sans-serif;
+      border-style: none;
+      padding: 0.5em;
+      clear: both;
+      justify-content:center;
+     }
+} 
