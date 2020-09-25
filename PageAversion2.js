@@ -21,7 +21,7 @@ function PageAversion2() {
   return (
     <div>
       <UserScreen />
-      <h2 className="welcome">ยินดีต้อนรับเข้าสู่ระบบ</h2>
+      {/* <h2 className="welcome">ยินดีต้อนรับเข้าสู่ระบบ</h2> */}
       <div className="MessageHeader">
         บุคลากรสามารถกรอกข้อมูลในระบบได้ตามวันเวลาที่กำหนด
       </div>
@@ -32,16 +32,18 @@ function PageAversion2() {
               <img className="logoKU" src="./rubik.png" alt="value" />
               เลือกหน่วยงานที่รับผิดชอบ
             </h1>
-            {Community &&
-              Community.map((Community, index) => (
-                <Link to="/PageBversion2">
-                  <button className="buttonCom">
-                    <div className="CommunityName">
-                      <div> {Community.name}</div>
-                    </div>
-                  </button>
-                </Link>
-              ))}
+            <div className="Inbox">
+              {Community &&
+                Community.map((Community, index) => (
+                  <Link to="/PageBversion2">
+                    <button className="buttonCom">
+                      <div className="CommunityName">
+                        <div> {Community.name}</div>
+                      </div>
+                    </button>
+                  </Link>
+                ))}
+            </div>
           </div>
         </div>
       </div>
