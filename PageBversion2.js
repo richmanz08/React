@@ -4,62 +4,14 @@ import UserScreen from "./UserScreen";
 import { Link } from "react-router-dom";
 // --
 import PropTypes from "prop-types";
-import MaskedInput from "react-text-mask";
+
 import NumberFormat from "react-number-format";
 import TextField from "@material-ui/core/TextField";
-//--
-function TextMaskCustom(props) {
-  const { inputRef, ...other } = props;
 
-  return (
-    <MaskedInput
-      {...other}
-      ref={(ref) => {
-        inputRef(ref ? ref.inputElement : null);
-      }}
-      mask={[
-        "(",
-        /[1-9]/,
-        /\d/,
-        /\d/,
-        ")",
-        " ",
-        /\d/,
-        /\d/,
-        /\d/,
-        "-",
-        /\d/,
-        /\d/,
-        /\d/,
-        /\d/,
-      ]}
-      placeholderChar={"\u2000"}
-      showMask
-    />
-  );
-}
-TextMaskCustom.propTypes = {
-  inputRef: PropTypes.func.isRequired,
-};
 function NumberFormatCustom(props) {
   const { inputRef, onChange, ...other } = props;
 
-  return (
-    <NumberFormat
-      {...other}
-      getInputRef={inputRef}
-      onValueChange={(values) => {
-        onChange({
-          target: {
-            name: props.name,
-            value: values.value,
-          },
-        });
-      }}
-      thousandSeparator
-      isNumericString
-    />
-  );
+  return <NumberFormat maxLength={10} allowNegative={false} {...other} />;
 }
 
 NumberFormatCustom.propTypes = {
@@ -104,30 +56,42 @@ function PageBversion2() {
   return (
     <div>
       <UserScreen />
-      <div className="pageA-grid">
-        <div className="grid-items3 version2">
+      <div className="Grid">
+        <div className="GridLeft positionB">
+          <Link to="/PageAversion2" style={{ textDecoration: "none" }}>
+            <button className="BackHome" onClick={"/PageAversion2"}>
+              <ion-icon name="home-outline"></ion-icon>
+              ย้อนกลับ
+            </button>
+          </Link>
+        </div>
+        <div className="GridMain version2">
           <div className="ZoneHead">
-            <div className="effect"></div>
-            <div className="CommunityV2">
-              หน่วยงาน <br></br>
-              <div className="nameCV2">การไฟฟ้า</div>
+            <div className="HostK">
+              <div className="K1">
+                <div className="K11"> </div>
+                <div className="K12">ข้อมูลที่ต้องกรอก</div>
+                <div className="K13">ปีการศึกษา</div>
+                <div className="K14">2563</div>
+              </div>
+              <div className="K2">
+                <div className="K21">ชื่อกระบวนการ</div>
+                <div className="K22"></div>
+                <div className="K23">การไฟฟ้า</div>
+              </div>
             </div>
-            <Link to="/PageAversion2" style={{ textDecoration: "none" }}>
-              <button className="BackHome" onClick={"/PageAversion2"}>
-                <ion-icon name="home-outline"></ion-icon>
-                กลับสู่หน้าหลัก
-              </button>
-            </Link>
           </div>
+          <div className="Inbox2">
+            {Question?.map((Question, index) => (
+              <div className="Inputbox">
+                <div className="BeforeNumber"></div>
+                <div className="ZoneNumber">{index + 1}</div>
 
-          {Question &&
-            Question.map((Question, index) => (
-              <div className="BoxUser">
-                <div className="z">
-                  <div className="ZoneNumber">{index + 1}</div>
+                <div className="BodyZone">
                   <div className="ZoneQuestion">
                     <div className="itemQ">{Question.Q1}</div>
                   </div>
+
                   <div
                     className="ZoneButton"
                     onClick={() => setDesc(Question.Q1)}
@@ -136,14 +100,16 @@ function PageBversion2() {
                       กรอกข้อมูล
                     </button>
                     <button className="B2">
-                      <img className="iconB" src="./note.png" alt="value" />
+                      <img className="iconB" src="./clock.png" alt="value" />
                       ประวัติ
                     </button>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
         </div>
+        <div className="GridRight"></div>
       </div>
       {/* Modal กรอกข้อมูล  */}
       <Modal show={show} onHide={handleClose} centered>
@@ -154,15 +120,12 @@ function PageBversion2() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* {Question &&
-            Question.map((Question, index) => (
-              <div className="itemQ">{Question.Q1}</div>
-            ))} */}
           <div className="newAnswer">
             <TextField
               label="ตอบ"
-              className="newAnswer"
-              value={values.numberformat}
+              max="5"
+              // value={values.numberformat}
+              style={({ width: "300px" }, { border: "none" })}
               onChange={handleChange}
               id="formatted-numberformat-input"
               InputProps={{
@@ -170,23 +133,6 @@ function PageBversion2() {
               }}
             />
           </div>
-          {/* <input
-            type="text"
-            className="Answer"
-            placeholder="ตอบ"
-
-            value={phoneNumber}
-            pattern="^[0-9]+\.[0-9][0-9]$"
-
-            onKeyDown={(e) =>
-              (e.keyCode === 69 ||
-                e.keyCode === 106 ||
-                e.keyCode === 107 ||
-                e.keyCode === 109 ||
-                e.keyCode === 111) &&
-              e.preventDefault()
-            }
-          ></input> */}
 
           <textarea
             className="TextareaModalText"

@@ -21,31 +21,52 @@ function PageAversion2() {
   return (
     <div>
       <UserScreen />
-      {/* <h2 className="welcome">ยินดีต้อนรับเข้าสู่ระบบ</h2> */}
-      <div className="MessageHeader">
-        บุคลากรสามารถกรอกข้อมูลในระบบได้ตามวันเวลาที่กำหนด
-      </div>
-      <div className="pageA-grid">
-        <div className="grid-items3 colorback">
-          <div class="BoxPageA">
-            <h1 className="SelectCommunity">
-              <img className="logoKU" src="./rubik.png" alt="value" />
-              เลือกหน่วยงานที่รับผิดชอบ
-            </h1>
-            <div className="Inbox">
-              {Community &&
-                Community.map((Community, index) => (
-                  <Link to="/PageBversion2">
-                    <button className="buttonCom">
-                      <div className="CommunityName">
-                        <div> {Community.name}</div>
-                      </div>
-                    </button>
-                  </Link>
-                ))}
+
+      <div className="Grid">
+        <div className="GridLeft "></div>
+        <div className="GridMain BoxPageA">
+          <div className="HostLine">
+            <div className="Line1">
+              <div className="L11"></div>
+              <div className="L12">การบวนการที่รับผิดชอบ</div>
+              <div className="L13">กระบวนการทั้งหมด</div>
+            </div>
+            <div className="Line2">
+              <div className="L21">ชื่อหน่วยงาน</div>
+              <div className="L22">งานบริการอาคารและสถานที่กองบริหาร</div>
             </div>
           </div>
+
+          <div className="Inbox">
+            {Community &&
+              Community.map((Community, index) => (
+                <div className="sizeBox">
+                  <div className="tab"></div>
+                  <div className="numberIndex">{index + 1}</div>
+                  <div className="buttonCom">
+                    <div>
+                      <div className="settingCom"> {Community.name}</div>
+                    </div>
+                  </div>
+                  <Link
+                    className="KNP"
+                    to="/PageBversion2"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <button className="keyNextpage">
+                      <img
+                        className="icon"
+                        src="./nextpage.png"
+                        alt="value"
+                      ></img>
+                      กรอกข้อมูล
+                    </button>
+                  </Link>
+                </div>
+              ))}
+          </div>
         </div>
+        <div className="GridRight"></div>
       </div>
     </div>
   );
