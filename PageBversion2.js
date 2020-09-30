@@ -60,7 +60,7 @@ function PageBversion2() {
         <div className="GridLeft positionB">
           <Link to="/PageAversion2" style={{ textDecoration: "none" }}>
             <button className="BackHome" onClick={"/PageAversion2"}>
-              <ion-icon name="home-outline"></ion-icon>
+              <img className="iconnBackhome" src="./back.png" alt="value" />
               ย้อนกลับ
             </button>
           </Link>
@@ -97,10 +97,11 @@ function PageBversion2() {
                     onClick={() => setDesc(Question.Q1)}
                   >
                     <button className="B1" onClick={handleShow}>
-                      กรอกข้อมูล
+                      <img className="iconB" src="./plus.png" alt="value" />
+                      เพิ่มข้อมูล
                     </button>
                     <button className="B2">
-                      <img className="iconB" src="./clock.png" alt="value" />
+                      <img className="iconB" src="./clock2.png" alt="value" />
                       ประวัติ
                     </button>
                   </div>

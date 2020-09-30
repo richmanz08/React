@@ -44,16 +44,18 @@ body {
   align-items: center;
   display: flex;
   background-color: #fdfdfd;
-  /* margin: 20px; */
 }
 .Inbox {
   background-color: #dbdfdd;
+
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.897);
 }
 .HostLine {
-  margin-right: 370px;
+  /* display: flex; */
+  margin-right: 65%;
+  margin-left: 20%;
 }
 .Line1 {
   display: flex;
@@ -63,12 +65,12 @@ body {
 }
 .L11 {
   background-color: #03a96b;
-  width: 8px;
-  height: 60px;
+  width: 5px;
+  height: 35px;
   margin-top: 15px;
 }
 .L12 {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 500;
   font-family: "Prompt";
   display: flex;
@@ -80,10 +82,11 @@ body {
 }
 .L13 {
   font-family: "Prompt";
+  font-size: 13px;
   margin-left: 15px;
   background-color: #a9b9ce;
   height: fit-content;
-  width: 150px;
+  width: 130px;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -99,18 +102,20 @@ body {
 .L21 {
   background-color: #03a96b;
   height: fit-content;
-  width: 150px;
+  width: 125px;
   border-radius: 15px;
   font-family: "Prompt";
   color: #ffffff;
   text-align: center;
+  font-size: 15px;
 }
 .L22 {
   background-color: #a5d5c2;
   font-family: "Prompt";
-  margin-left: 15px;
+  font-size: 15px;
+  margin-left: 12px;
   border-radius: 5px;
-  width: 300px;
+  width: 280px;
   text-align: center;
 }
 .tab {
@@ -239,8 +244,7 @@ body {
   justify-items: center;
   flex-direction: column;
   /* align-items: center; */
-  margin-right: 620px;
-  margin-left: 100px;
+  margin-right: 145%;
 }
 .K1 {
   display: flex;
@@ -251,8 +255,8 @@ body {
 
 .K11 {
   background-color: #03a96b;
-  width: 8px;
-  height: 60px;
+  width: 5px;
+  height: 30px;
   margin-top: 15px;
 }
 
@@ -263,18 +267,19 @@ body {
   font-family: "Prompt";
   margin-top: 18px;
   font-weight: 500;
-  margin-left: 20px;
+  margin-left: 10px;
+  width: 200px;
 }
 .K13 {
   height: fit-content;
   background-color: #05aa6d;
-  width: 100px;
+  width: 80px;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 5px;
   color: #c9cce7;
   font-family: "Prompt";
-  margin-left: 15px;
   margin-top: 18px;
+  font-size: 13px;
 }
 .K14 {
   font-family: "Prompt";
@@ -283,9 +288,10 @@ body {
   width: 80px;
   color: #c9cce7;
   text-align: center;
-  border-radius: 15px;
-  margin-left: 5px;
+  border-radius: 5px;
+  margin-left: 3px;
   margin-top: 18px;
+  font-size: 13px;
 }
 .K2 {
   display: flex;
@@ -294,22 +300,23 @@ body {
 .K21 {
   font-family: "Prompt";
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
   background-color: #b9c5d1;
-  width: 130px;
+  width: 120px;
   text-align: center;
   border-radius: 5px;
 }
 .K22 {
-  background-color: #03a96c;
+  background-color: #56f376d0;
   width: 5px;
-  height: 40px;
+  height: 25px;
   margin-left: 5px;
 }
 .K23 {
   font-family: "Prompt";
-  font-size: 22px;
+  font-size: 18px;
   margin-left: 5px;
+  font-weight: 500;
 }
 .z {
   display: flex;
@@ -328,16 +335,15 @@ body {
 .ZoneNumber {
   width: 70px;
   height: 100%;
-
   background-color: #b9c8cf;
   font-family: "Prompt";
-  font-size: 50px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
   color: #212529;
   text-align: center;
   align-items: center;
-  font-weight: 600;
+  font-weight: 500;
 }
 .BodyZone {
   display: flex;
@@ -355,58 +361,66 @@ body {
   align-items: center;
 }
 .ZoneButton {
-  /* margin-left: 50px; */
   width: 250px;
   height: 100%;
   align-items: center;
   justify-content: center;
   display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
 }
 .B1 {
-  background-color: #8da4c2;
+  background-color: #679eddbb;
   /* background-color: #03a96b; */
-  color: #e4e6e5;
-  border-radius: 10px;
+  color: #0c0e0d;
+  border-radius: 5px;
   border-style: none;
-  width: 120px;
-  height: 60px;
+  width: 90px;
+  height: 45px;
   font-family: "kanit", sans-serif;
   border-color: aqua;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .B1:hover {
-  background-color: rgb(255, 255, 255);
-  /* transform: translateY(-7px); */
+  background-color: #5493db;
+  transform: translateX(-7px);
   color: #060707;
   transition: all 0.3s ease-in-out 0s;
 }
 .iconB {
   width: 20px;
   height: 20px;
-  margin-right: 2px;
+  margin: 1px;
 }
 .B2 {
-  background-color: #90949293;
+  background-color: #90949234;
   margin-left: 10px;
-  color: #e4e6e5;
-  border-radius: 10px;
+  color: #080808;
+  border-radius: 5px;
   border-style: none;
-  width: 120px;
-  height: 60px;
   font-family: "kanit", sans-serif;
   font-weight: 500;
-  font-size: 19px;
+  font-size: 15px;
+  width: 90px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .B2:hover {
-  background-color: #f5f3f3f5;
+  background-color: rgba(168, 166, 166, 0.961);
   /* transform: translateY(-7px); */
   transition: all 0.3s ease-in-out 0s;
-
+  transform: translateX(-7px);
   color: #161817;
 }
 
 .itemQ {
   font-family: "Prompt";
-  font-size: 20px;
+  font-size: 17px;
   color: rgb(0, 0, 0);
   text-align: center;
   /* max-height: 25vh; */
@@ -471,9 +485,14 @@ body {
 .positionB {
   text-align: center;
 }
+.iconnBackhome {
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+}
 .BackHome {
-  width: 130px;
-  height: 40px;
+  width: 85px;
+  height: 35px;
   font-family: "Prompt";
   border-radius: 5px;
   color: rgb(92, 87, 87);
@@ -481,6 +500,11 @@ body {
   border: 1px solid;
   border-color: rgb(150, 141, 141);
   transition: all 0.3s ease-in-out 0s;
+  font-size: 14px;
+}
+.BackHome:hover {
+  width: 95px;
+  height: 45px;
 }
 
 /*                 RESPONSIVE                             */
@@ -503,19 +527,21 @@ body {
     margin: 0;
   }
   .Inbox {
-    width: 100vw;
-    height: 100vh;
+    width: 95vw;
+    height: 95vh;
   }
   .sizeBox {
-    width: 100vw;
+    width: 95vw;
   }
   .buttonCom {
     width: 450px;
   }
   .BackHome {
     position: absolute;
-    margin-left: 620px;
+    /* margin-left: 620px; */
     margin-top: 30px;
+    margin-left: 89%;
+    margin-right: 11%;
   }
   .ZoneHead {
     margin: 0;
@@ -538,9 +564,13 @@ body {
     justify-content: flex-start;
   }
   .Inbox2 {
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     margin-right: 5px;
+  }
+  .Inputbox {
+    width: 95vw;
+    justify-content: center;
   }
 
   .BeforeNumber {
@@ -548,6 +578,7 @@ body {
   }
   .BodyZone {
     display: flex;
+    width: 75%;
   }
   .ZoneQuestion {
     width: 350px;
@@ -556,6 +587,9 @@ body {
     display: flex;
     margin: 0;
     margin-left: 33px;
+  }
+  .B2 {
+    margin-right: 10px;
   }
 }
 @media (max-width: 480px) {
@@ -570,8 +604,24 @@ body {
   .GridRight {
     display: none;
   }
-  .GridMain {
-    /* border: 5px solid rgb(248, 240, 240); */
+
+  .sizeBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+  }
+  .Inbox {
+    height: 199.9vh;
+    width: 95vw;
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .BoxPageA {
     height: 100vh;
   }
   .HostLine {
@@ -580,6 +630,7 @@ body {
     margin: 0;
     height: 150px;
   }
+
   .Line1 {
     flex-direction: column;
     margin: 0;
@@ -609,31 +660,33 @@ body {
   .L22 {
     margin-top: 5px;
     margin: 0;
+    background-color: white;
   }
   .sizeBox {
     flex-direction: column;
-    width: 100vw;
+    width: 90vw;
   }
   .tab {
     height: 10px;
-    width: 100vw;
+    width: 90vw;
   }
   .numberIndex {
     height: fit-content;
-    width: 100vw;
+    width: 90vw;
     margin: 0;
     font-size: 20px;
   }
   .buttonCom {
     margin: 0;
-    width: 100vw;
+    width: 90vw;
   }
   .KNP {
-    width: 100vw;
+    width: 90vw;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
   }
   .keyNextpage {
     margin: 0;
@@ -661,12 +714,18 @@ body {
   }
   .K14 {
     margin: 0;
+    margin-top: 5px;
   }
   .K2 {
-    flex-direction: column;
+    /* flex-direction: column; */
+    align-items: center;
+    background-color: rgb(162, 214, 212);
+    justify-content: center;
+    margin-top: 5px;
   }
   .K21 {
     margin: 0;
+    background-color: unset;
   }
   .K22 {
     width: 100vw;
@@ -677,29 +736,38 @@ body {
   }
   .K23 {
     margin: 0;
+    font-size: 15px;
+    font-weight: 500;
   }
   .Inbox2 {
-    width: 100vw;
+    width: 95vw;
+    margin-top: 5px;
+    height: 200vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
   }
   .Inputbox {
     margin: 0;
     width: 100vw;
     flex-direction: column;
+    align-items: center;
   }
   .BeforeNumber {
     margin-top: 15px;
-    width: 100vw;
+    width: 90vw;
     height: 10px;
   }
   .ZoneNumber {
-    width: 100vw;
+    width: 90vw;
     font-size: 20px;
     height: fit-content;
   }
   .BodyZone {
     flex-direction: column;
     margin: 0;
-    width: 100vw;
+    width: 90vw;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -707,10 +775,23 @@ body {
     margin-bottom: 20px;
   }
   .ZoneQuestion {
-    width: 100vw;
+    width: 90vw;
   }
   .itemQ {
-    width: 100vw;
+    width: 80vw;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+  }
+  .ZoneButton {
+    display: flex;
+
+    justify-content: center;
+    width: 90vw;
+    margin: 0;
+    margin-bottom: 15px;
   }
   .B1 {
     width: 100px;
