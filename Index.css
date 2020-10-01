@@ -592,6 +592,40 @@ body {
     margin-right: 10px;
   }
 }
+@media (max-width: 700px) {
+  .BackHome {
+    position: absolute;
+    /* margin-left: 620px; */
+    margin-top: 30px;
+    margin-left: 80%;
+    margin-right: 20%;
+  }
+  .sizeBox {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .tab {
+    height: 50px;
+  }
+  .numberIndex {
+    height: 50px;
+  }
+  .buttonCom {
+    width: 250px;
+    height: 50px;
+  }
+  .keyNextpage {
+    font-size: 12px;
+    width: 110px;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+  .Inputbox {
+    margin: 0;
+    margin-top: 15px;
+  }
+}
 @media (max-width: 480px) {
   .Grid {
     display: grid;
@@ -768,6 +802,7 @@ body {
     flex-direction: column;
     margin: 0;
     width: 90vw;
+    /* height: 50vw; */
     display: flex;
     text-align: center;
     justify-content: center;
@@ -779,7 +814,7 @@ body {
   }
   .itemQ {
     width: 80vw;
-    height: 20vh;
+    height: fit-content;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -795,11 +830,11 @@ body {
   }
   .B1 {
     width: 100px;
-    height: 40px;
+    height: 50px;
   }
   .B2 {
     width: 100px;
-    height: 40px;
+    height: 50px;
   }
 }
 
