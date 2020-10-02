@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Modal } from "react-bootstrap";
 import UserScreen from "./UserScreen";
+import PageAversion2 from "./PageAversion2";
 import { Link } from "react-router-dom";
 // --
 import PropTypes from "prop-types";
 
 import NumberFormat from "react-number-format";
 import TextField from "@material-ui/core/TextField";
+import axios from "axios";
 
 function NumberFormatCustom(props) {
   const { inputRef, onChange, ...other } = props;
@@ -19,22 +21,36 @@ NumberFormatCustom.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
-function PageBversion2() {
+function PageBversion2(props) {
+  const [questions, setQuestions] = useState();
+  useEffect(() => {
+    console.log(props.community);
+    async function processFetch() {
+      const res = await fetch(
+        `http://defea17a0c6b.ngrok.io/process/AllInput/?processID=${props.location.state.community}&fbclid=IwAR0ODwOGyVGxkI9fyAISMM47XUfsTjzBy7A8sXwO0st_TTN_CD_lE6l3VMI `
+      );
+      res.json().then(async (res) => {
+        console.log.apply(res);
+        setQuestions(res);
+      });
+    }
+    processFetch();
+  }, []);
   const [desc, setDesc] = useState();
-  const Question = [
-    { CommunityS: "การให้บริการไฟฟ้า", Q1: " รายงานครั้งไฟฟ้าดับ" },
-    {
-      Q1: " จำนวนพนักงานที่เข้าทำงาน",
-    },
-    {
-      Q1: " จำนวนครั้งที่ไฟฟ้าดับ",
-    },
-    {
-      Q1:
-        "คะแนนเฉลี่ยผลการประเมินความพึงพอใจของบุคลากรหรือหน่วยงานที่มีต่อสารสนเทศนิสิต",
-    },
-  ];
-  console.log(Question.Q1);
+  // const Question = [
+  //   { CommunityS: "การให้บริการไฟฟ้า", Q1: " รายงานครั้งไฟฟ้าดับ" },
+  //   {
+  //     Q1: " จำนวนพนักงานที่เข้าทำงาน",
+  //   },
+  //   {
+  //     Q1: " จำนวนครั้งที่ไฟฟ้าดับ",
+  //   },
+  //   {
+  //     Q1:
+  //       "คะแนนเฉลี่ยผลการประเมินความพึงพอใจของบุคลากรหรือหน่วยงานที่มีต่อสารสนเทศนิสิต",
+  //   },
+  // ];
+  // console.log(Question.Q1);
   const [show, setShow] = useState(false);
 
   const handleClose = () => {
@@ -77,37 +93,37 @@ function PageBversion2() {
               <div className="K2">
                 <div className="K21">ชื่อกระบวนการ</div>
                 <div className="K22"></div>
-                <div className="K23">การไฟฟ้า</div>
+                <div className="K23">{questions && questions.description}</div>
               </div>
             </div>
           </div>
           <div className="Inbox2">
-            {Question?.map((Question, index) => (
-              <div className="Inputbox">
-                <div className="BeforeNumber"></div>
-                <div className="ZoneNumber">{index + 1}</div>
+            {questions &&
+              questions.inputs.map((question, index) => (
+                <div className="Inputbox">
+                  <div className="BeforeNumber"></div>
+                  <div className="ZoneNumber">{index + 1}</div>
 
-                <div className="BodyZone">
-                  <div className="ZoneQuestion">
-                    <div className="itemQ">{Question.Q1}</div>
-                  </div>
-
-                  <div
-                    className="ZoneButton"
-                    onClick={() => setDesc(Question.Q1)}
-                  >
-                    <button className="B1" onClick={handleShow}>
-                      <img className="iconB" src="./plus.png" alt="value" />
-                      เพิ่มข้อมูล
-                    </button>
-                    <button className="B2">
-                      <img className="iconB" src="./clock2.png" alt="value" />
-                      ประวัติ
-                    </button>
+                  <div className="BodyZone">
+                    <div className="ZoneQuestion">
+                      <div className="itemQ"> {question.description} </div>
+                    </div>{" "}
+                    <div
+                      className="ZoneButton"
+                      onClick={() => setDesc(question.description)}
+                    >
+                      <button className="B1" onClick={handleShow}>
+                        <img className="iconB" src="./plus.png" alt="value" />
+                        เพิ่มข้อมูล
+                      </button>
+                      <button className="B2">
+                        <img className="iconB" src="./clock2.png" alt="value" />
+                        ประวัติ
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}{" "}
           </div>
         </div>
         <div className="GridRight"></div>

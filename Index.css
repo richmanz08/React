@@ -525,10 +525,11 @@ body {
   .HostLine {
     width: 100vw;
     margin: 0;
+    margin-left: 50px;
   }
   .Inbox {
     width: 95vw;
-    height: 95vh;
+    height: 80vh;
   }
   .sizeBox {
     width: 95vw;
@@ -540,8 +541,8 @@ body {
     position: absolute;
     /* margin-left: 620px; */
     margin-top: 30px;
-    margin-left: 89%;
-    margin-right: 11%;
+    margin-left: 86%;
+    margin-right: 14%;
   }
   .ZoneHead {
     margin: 0;
@@ -552,6 +553,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: flex-start;
+    margin-left: 50px;
   }
   .K1 {
     width: 100vw;

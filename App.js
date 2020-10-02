@@ -13,6 +13,7 @@ class App extends Component {
         <Route path="/navuser" component={UserScreen} />
         <Route path="/PageBversion2" exact={true} component={PageBversion2} />
         <Route path="/input" exact={true} component={input} />
+        <Route path="/process" exact={true} component={PageBversion2} />
       </div>
     );
   }
